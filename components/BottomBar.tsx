@@ -97,16 +97,14 @@ export default function BottomBar() {
 					<Link href={`/tracks/${songData.id}`} className={styles.songTitle}>
 						{songData.name}
 					</Link>
-					<span className={styles.artistName}>
+					<div className={styles.artistName}>
 						{songData.artists.map((artist, i) => (
-							<>
-								<Link href={`/artists/${artist.id}`} key={artist.id}>
-									{artist.name}
-								</Link>
+							<Link href={`/artists/${artist.id}`} key={artist.id}>
+								{artist.name}
 								{i !== songData.artists.length - 1 ? ', ' : null}
-							</>
+							</Link>
 						))}
-					</span>
+					</div>
 
 					<Link
 						href={`/albums/${songData.album.id}`}

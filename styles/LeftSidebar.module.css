@@ -1,0 +1,29 @@
+.container {
+	grid-area: left-sidebar;
+	width: 18rem;
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+.top > a {
+	display: flex;
+	padding: 0.25rem;
+	gap: 0.5rem;
+	transition: opacity 0.15s;
+}
+
+.top > a:hover {
+	opacity: 50%;
+}
+
+.playlists {
+	height: 100%;
+	width: 100%;
+	overflow: hidden auto;
+}
