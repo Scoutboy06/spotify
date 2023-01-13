@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Round');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	background-color: #000;
+	font-family: sans-serif, Arial, Helvetica;
+
+	--main-color: #d4b583;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body,
+#__next {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+html {
+	color-scheme: dark;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.icon {
+	font-family: 'Material Icons';
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+}
+
+.icon.round {
+	font-family: 'Material Icons Round';
+}

@@ -1,0 +1,94 @@
+.container {
+	grid-area: bottom-bar;
+	background-color: #0a0a0a;
+	height: 6rem;
+	padding: 1rem;
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+}
+
+.left,
+.middle,
+.right {
+	width: calc(100% / 3);
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.songMeta {
+	display: flex;
+	flex-direction: column;
+}
+
+.songTitle:hover,
+.artistName:hover,
+.albumName:hover {
+	text-decoration: underline;
+}
+
+.songTitle {
+	font-size: 1rem;
+}
+
+.songTitle,
+.albumName,
+.artistName:hover {
+	color: var(--main-color);
+}
+
+.artistName {
+	font-weight: bold;
+}
+
+.artistName,
+.albumName {
+	font-size: 0.7rem;
+}
+
+.middle {
+	display: flex;
+	justify-content: center;
+	gap: 0.7rem;
+}
+
+.middle > button {
+	font-size: 1.8rem;
+	padding: 0.3rem;
+}
+
+.middle > button:nth-child(2) {
+	color: #000;
+	background-color: var(--main-color);
+	border-radius: 50%;
+	transition: transform 0.15s;
+}
+
+.middle > button:nth-child(2):hover {
+	transform: scale(1.05);
+}
+
+.middle > button:nth-child(2):active {
+	transform: scale(0.95);
+}
+
+.middle > button:first-child,
+.middle > button:last-child {
+	transition: opacity 0.15s;
+}
+
+.middle > button:first-child:active,
+.middle > button:last-child:active {
+	color: var(--main-color);
+	opacity: 0.9;
+}
+
+.right {
+	/* display: flex;
+	align-items: flex-end; */
+	text-align: right;
+}
