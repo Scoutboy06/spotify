@@ -1,12 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-// import { SWRConfig } from 'swr';
+
+import Layout from '@/components/Layout';
 
 // import useUser from '@/hooks/useUser';
-// import fetcher from '@/functions/fetcher';
-
-// import styles from '@/styles/index.module.css';
 
 export default function Home() {
 	const router = useRouter();
@@ -17,7 +15,7 @@ export default function Home() {
 	// }, [isLoggedIn, isLoading, router]);
 
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title>Spotify Clone</title>
 				<meta
@@ -29,6 +27,6 @@ export default function Home() {
 			</Head>
 
 			<h1>Hello!</h1>
-		</>
+		</Layout>
 	);
 }

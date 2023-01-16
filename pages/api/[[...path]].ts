@@ -9,6 +9,6 @@ const routes = nc()
 	.get('/me/player/devices', spotifyAPI)
 	.get('/me/playlists', spotifyAPI);
 
-const handler = nc().use('/api', protect, routes);
+const handler = nc().use('/api', routes);
 
 export default handler;

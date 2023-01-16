@@ -1,12 +1,13 @@
 import useSWR from 'swr';
 
 export default function useUser() {
-	const { data, error, mutate } = useSWR('/api/me');
+	const { data: user, error, mutate, isLoading } = useSWR('/api/me');
+	const isLoggedIn = !error && !!user;
 
 	return {
-		isLoading: !error && !data,
-		isLoggedIn: !error && data && !data?.error,
-		user: data,
+		isLoading,
+		isLoggedIn,
+		user,
 		error,
 		mutate,
 	};

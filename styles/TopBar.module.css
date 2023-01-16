@@ -1,0 +1,13 @@
+.container {
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	justify-content: space-between;
+}
+
+.left,
+.right {
+	width: 50%;
+}

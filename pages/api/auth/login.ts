@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-type Data = {
-	name: string;
-};
-
 const scopes = [
 	// Images
 	// 'ugc-image-upload',
@@ -41,10 +37,7 @@ const scopes = [
 	'playlist-modify-public',
 ].join(' ');
 
-export default function handler(
-	req: NextApiRequest,
-	res: NextApiResponse<Data>
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	res.redirect(
 		'https://accounts.spotify.com/authorize?' +
 			new URLSearchParams({
