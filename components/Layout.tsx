@@ -16,10 +16,7 @@ export default function Layout({ children }: any) {
 		if (!isLoading && !isLoggedIn) router.push('/login');
 	}, [isLoggedIn, isLoading, router]);
 
-	// if (isLoading) return null;
-	// console.log('isLoading:', isLoading);
-	// console.log('isLoggedIn:', isLoggedIn);
-	// console.log('user:', user);
+	if (!isLoggedIn) return null;
 
 	return (
 		<main className='main'>

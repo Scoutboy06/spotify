@@ -5,7 +5,10 @@
 	font-family: sans-serif, 'Helvetica Neue', Helvetica, Arial;
 
 	--main-color: #d4b583;
+	--main-rgb: 212, 181, 131;
+	--brightness: 0, 0, 0;
 	--spotify-green: #1db954;
+	--overlay: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -34,6 +37,7 @@ a {
 button {
 	border: 0;
 	outline: none;
+	font: inherit;
 }
 
 .icon {

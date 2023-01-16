@@ -26,10 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	})
 		.then(res => res.json())
 		.then(json => {
-			// const generatedToken = generateToken(json.access_token);
-			const token = json.access_token;
-
-			cookies.set('access_token', token);
+			cookies.set('access_token', json.access_token);
 			res.redirect('/');
 		})
 		.catch(err => {

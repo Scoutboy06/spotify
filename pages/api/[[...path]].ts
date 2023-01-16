@@ -1,6 +1,5 @@
 import nc from 'next-connect';
 import spotifyAPI from './functions/spotifyAPI';
-import protect from '@/middlewares/protect';
 
 const routes = nc()
 	.get('/playlists/:id', spotifyAPI)

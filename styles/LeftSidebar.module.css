@@ -2,7 +2,7 @@
 	grid-area: left-sidebar;
 	width: 18rem;
 	padding: 1rem;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: var(--overlay);
 }
 
 .top {

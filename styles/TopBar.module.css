@@ -1,5 +1,5 @@
 .container {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: var(--overlay);
 	height: 4rem;
 	display: flex;
 	align-items: center;
@@ -10,4 +10,89 @@
 .left,
 .right {
 	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.left {
+	gap: 0.3rem;
+}
+
+.left button {
+	border-radius: 50%;
+	background-color: rgba(var(--brightness), 0.2);
+	cursor: pointer;
+	color: var(--main-color);
+	font-size: 40px !important;
+	overflow: hidden;
+}
+
+.right {
+	justify-content: flex-end;
+}
+
+.profile {
+	position: relative;
+	background-color: rgba(var(--brightness), 0.2);
+	padding: 0.2rem;
+	border-radius: 99rem;
+	display: flex;
+	align-items: center;
+	color: var(--main-color);
+	cursor: pointer;
+}
+
+.profile:hover,
+.profile:focus-within {
+	background-color: rgba(var(--brightness), 0.8);
+}
+
+.profile > img {
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile > span {
+	margin-left: 0.3rem;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.dropdown {
+	width: 12rem;
+	position: absolute;
+	bottom: -2px;
+	right: 0;
+	transform: translateY(100%);
+	background-color: #000;
+	color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	padding: 0.3rem 0;
+	cursor: auto;
+}
+
+.dropdown > a {
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	padding: 0.8rem 1rem;
+	text-align: left;
+	cursor: auto;
+}
+
+.dropdown > a:hover {
+	background-color: rgba(var(--main-rgb), 0.15);
+	color: var(--main-color);
+}
+
+.dropdown hr {
+	color: rgba(255, 255, 255, 0.1);
+}
+
+.profile:focus-within .dropdown {
+	opacity: 1;
+	visibility: visible;
 }

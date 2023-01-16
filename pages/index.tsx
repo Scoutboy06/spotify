@@ -1,19 +1,8 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 import Layout from '@/components/Layout';
 
-// import useUser from '@/hooks/useUser';
-
 export default function Home() {
-	const router = useRouter();
-	// const { isLoggedIn, isLoading } = useUser();
-
-	// useEffect(() => {
-	// 	if (!isLoading && !isLoggedIn) router.push('/login');
-	// }, [isLoggedIn, isLoading, router]);
-
 	return (
 		<Layout>
 			<Head>
@@ -26,7 +15,13 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1>Hello!</h1>
+			<div
+				style={{
+					width: '100%',
+					height: 'calc(100% - 4rem)',
+					background: 'var(--overlay)',
+				}}
+			></div>
 		</Layout>
 	);
 }

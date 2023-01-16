@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 import useUser from '@/hooks/useUser';
-
 import CurrentUser from '@/types/CurrentUser';
 
 import styles from '@/styles/TopBar.module.css';
+import Link from 'next/link';
 
 export default function TopBar() {
 	const { user }: { user: CurrentUser } = useUser();
@@ -30,7 +31,25 @@ export default function TopBar() {
 			</div>
 
 			<div className={styles.right}>
-				<span>{user?.display_name}</span>
+				<button className={styles.profile}>
+					<Image
+						src={user.images[0].url}
+						width={26}
+						height={26}
+						alt='Profile picture'
+					/>
+
+					<span>{user?.display_name}</span>
+
+					<i className='icon'>arrow_drop_down</i>
+
+					<div className={styles.dropdown}>
+						<Link href='/profile'>Profile</Link>
+						<Link href='/settings'>Settings</Link>
+						<hr />
+						<Link href='/api/logout'>Log out</Link>
+					</div>
+				</button>
 			</div>
 		</div>
 	);
